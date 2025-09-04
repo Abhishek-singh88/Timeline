@@ -52,13 +52,13 @@ const PasswordModal = ({ isOpen, onClose, onSubmit }) => {
             <button
               type="button"
               onClick={handleClose}
-              className="flex-1 px-4 py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-gray-300 hover:text-white rounded-lg transition-all duration-200"
+              className="cursor-pointer flex-1 px-4 py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-gray-300 hover:text-white rounded-lg transition-all duration-200"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="flex-1 px-4 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
+              className="cursor-pointer flex-1 px-4 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
             >
               Access
             </button>
@@ -89,9 +89,9 @@ function App() {
     if (enteredPassword === correctPassword) {
       setIsAdminMode(true);
       setShowPasswordModal(false);
-      toast.success('✅ Admin access granted');
+      toast.success(' Admin access granted');
     } else {
-      toast.error('❌ Incorrect password');
+      toast.error('Incorrect password');
       setShowPasswordModal(false);
     }
   };

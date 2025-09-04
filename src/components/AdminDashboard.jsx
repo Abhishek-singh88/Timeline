@@ -37,17 +37,17 @@ const AdminDashboard = () => {
           failed: response.data.emails_failed,
           events: response.data.events_count
         });
-        toast.success(`✅ Success! Updates sent to ${response.data.emails_sent} subscribers`);
+        toast.success(`Success! Updates sent to ${response.data.emails_sent} subscribers`);
         await fetchSubscriberCount(); // Refresh count
       } else {
-        toast.error('❌ Failed to send updates');
+        toast.error('Failed to send updates');
       }
     } catch (error) {
       console.error('Trigger error:', error);
       if (error.response?.data?.message) {
-        toast.error(`❌ Error: ${error.response.data.message}`);
+        toast.error(` Error: ${error.response.data.message}`);
       } else {
-        toast.error('❌ Failed to send updates. Check your connection.');
+        toast.error('Failed to send updates. Check your connection.');
       }
     } finally {
       setLoading(false);
@@ -140,10 +140,10 @@ const AdminDashboard = () => {
             </>
           ) : (
             <>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className=" w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
               </svg>
-              <span>Send GitHub Updates</span>
+              <span className="cursor-pointer">Send GitHub Updates</span>
             </>
           )}
         </button>
@@ -158,7 +158,7 @@ const AdminDashboard = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
           </svg>
-          <span>Preview</span>
+          <span className="cursor-pointer">Preview</span>
         </button>
       </div>
 

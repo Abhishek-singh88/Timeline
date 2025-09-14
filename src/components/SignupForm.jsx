@@ -71,6 +71,10 @@ const SignupForm = () => {
             Subscribe to receive handpicked GitHub insights delivered to your inbox. 
             No noise, just signal.
           </p>
+          <br></br>
+           <p className="text-gray-300 text-lg leading-relaxed">
+            NOTE : If you got Network error, then wait for 1 minutes and try again because backend is deployed on render so it takes upto 40 seconds to restart server.
+          </p>
         </div>
         
         <form onSubmit={handleSubmit} className="space-y-8">
